@@ -1,0 +1,94 @@
+{
+  "project_info": {
+    "project_number": "994904406987",
+    "firebase_url": "https://college-projects.firebaseio.com",
+    "project_id": "college-projects",
+    "storage_bucket": "college-projects.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994904406987:android:57a8767efbe8bfe7",
+        "android_client_info": {
+          "package_name": "com.aurganonlite.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "994904406987-u1c9cdfjct4084fsd1pslmhas228ribt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aurganonlite.android",
+            "certificate_hash": "35E60C5CB86EDACC88EEB43CF6A06FA7274A685F"
+          }
+        },
+        {
+          "client_id": "994904406987-qbl8328rqar162iqlcrvtknqoiirsjqu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aurganonlite.android",
+            "certificate_hash": "1B0D9C3B64871AD5D726A156E9EBF0DE84AB43EC"
+          }
+        },
+        {
+          "client_id": "994904406987-7kjcfms129g5atama7c7h1c2lft1lpck.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9R96GZL2i81s0-AM4EqhCl9fk8Mc9C_0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "994904406987-7kjcfms129g5atama7c7h1c2lft1lpck.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994904406987:android:0bd30fc41a7a41ab",
+        "android_client_info": {
+          "package_name": "com.fnplus.realtime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "994904406987-7kjcfms129g5atama7c7h1c2lft1lpck.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9R96GZL2i81s0-AM4EqhCl9fk8Mc9C_0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
