@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                     txtCoordinates.setText("Lat:" + Latitude + " ,Long:" + Longitude);
 
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
-                    DatabaseReference myRef = database.getReference("college-projects").child("coordinates");
+                    DatabaseReference myRef = database.getReference().child("coordinates");
                     myRef.child("0").setValue(Latitude);
                     myRef.child("1").setValue(Longitude);
                 }
