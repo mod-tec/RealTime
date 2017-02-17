@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
+    // Actual Work
     private void proceedAfterPermission() {
         // We've got the permission, now we can proceed further
         initReference();
