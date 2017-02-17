@@ -211,6 +211,7 @@ public class MainActivity extends AppCompatActivity {
                     btnLocationSharing.setText(R.string.stop_location_sharing);
                 } else {
                     btnLocationSharing.setText(R.string.start_location_sharing);
+                    // Kill the app
                     android.os.Process.killProcess(android.os.Process.myPid());
                 }
             }

@@ -2,13 +2,14 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<!-- Bootstrap Core CSS -->
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 		<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
-		<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArKVQJf5lde-QcM8w1x8t6zc3vb9BfYEE&callback=initMap">
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArKVQJf5lde-QcM8w1x8t6zc3vb9BfYEE&callback=initMap">
     </script>
 
-		<title>TEST</title>
+		<title>Location Dashboard</title>
 	</head>
 
 	<style>
@@ -16,18 +17,15 @@
 	        height: 400px;
 	        width: 100%;
 	       }
-	    </style>
+	</style>
 
 	<body>
-		<h1>GPS TEST</h1>
-		<h1 id="lat">loading..</h1><br/>
-		<h1 id="lon">loading..</h1>
+		<h1 class = "text-center text-primary">Location Dashboard</h1>
+		<h3 class= "text-danger" id="lat">loading..</h3><br/>
+		<h3 class= "text-danger" id="lon">loading..</h3>
 	</br/>
-	<div id="map">
-		<script>
-
-    </script>
-	</div>
+	<div id="map"></div>
+	
 	</body>
 </html>
 
@@ -48,9 +46,7 @@
 	var long = -1, lat = -1;
 
 	function initMap() {
-		//13.032260, 80.178681
-
-
+		// 13.032260, 80.178681 SRM's 
 
 		var uluru = {
 			lat: 13.032260,
@@ -70,14 +66,12 @@
 		ref.on("value", snap => {
 			long = snap.val()[0];
 			lat = snap.val()[1];
-			document.getElementById('lat').innerHTML = lat;
-			document.getElementById('lon').innerHTML = long;
+			document.getElementById('lat').innerHTML = "Lat : " + lat;
+			document.getElementById('lon').innerHTML = "Long : " + long;
 			var LatLng = new google.maps.LatLng(long, lat);
 			marker.setPosition(LatLng);
 			map.setCenter(LatLng)
 			console.log("fetched!" + long + " " + lat);
 		});
-
 	}
-
 </script>

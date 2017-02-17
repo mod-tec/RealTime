@@ -156,7 +156,6 @@ public class LocationService extends Service {
             Toast.makeText(getApplicationContext(), "Gps Enabled", Toast.LENGTH_SHORT).show();
         }
 
-
         public void onStatusChanged(String provider, int status, Bundle extras) {
 
         }
