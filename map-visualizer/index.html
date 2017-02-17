@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>TEST</title>
+	</head>
+	<body>
+		<h1>GPS TEST</h1>
+		<h2 id="lat"></h2><br/>
+		<h2 id="lon"></h2>
+	</br/>
+	</body>
+</html>
+
+<script>
+window.onload = function(){
+	if (navigator.geolocation) {
+		var startPos;
+		var geoSuccess = function(position) {
+			startPos = position;
+			document.getElementById('lat').innerHTML = startPos.coords.latitude;
+			document.getElementById('lon').innerHTML = startPos.coords.longitude;
+			console.log(startPos.coords.latitude);
+		};
+		navigator.geolocation.getCurrentPosition(geoSuccess);
+		console.log('Geolocation is supported!');
+	}
+	else {
+		console.log('Geolocation is not supported for this Browser/OS.');
+	}
+}
+</script>
