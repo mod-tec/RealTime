@@ -22,7 +22,6 @@ public class LocationService extends Service {
     public Location previousBestLocation = null;
 
     Intent intent;
-    int counter = 0;
 
     @Override
     public void onCreate() {
@@ -89,7 +88,6 @@ public class LocationService extends Service {
         return false;
     }
 
-
     /**
      * Checks whether two providers are the same
      */
@@ -150,7 +148,6 @@ public class LocationService extends Service {
         public void onProviderDisabled(String provider) {
             Toast.makeText(getApplicationContext(), "Gps Disabled", Toast.LENGTH_SHORT).show();
         }
-
 
         public void onProviderEnabled(String provider) {
             Toast.makeText(getApplicationContext(), "Gps Enabled", Toast.LENGTH_SHORT).show();
