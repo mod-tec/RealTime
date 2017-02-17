@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+		<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArKVQJf5lde-QcM8w1x8t6zc3vb9BfYEE&callback=initMap">
+    </script>
+
+		<title>TEST</title>
+	</head>
+
+	<style>
+	      #map {
+	        height: 400px;
+	        width: 100%;
+	       }
+	    </style>
+
+	<body>
+		<h1>GPS TEST</h1>
+		<h1 id="lat">loading..</h1><br/>
+		<h1 id="lon">loading..</h1>
+	</br/>
+	<div id="map">
+		<script>
+
+    </script>
+	</div>
+	</body>
+</html>
+
+<script>
+// Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCH12DjW0hhGegIl89CtZVwv35ZAYnW9pg",
+    authDomain: "college-projects.firebaseapp.com",
+    databaseURL: "https://college-projects.firebaseio.com",
+    storageBucket: "college-projects.appspot.com",
+    messagingSenderId: "994904406987"
+  };
+  firebase.initializeApp(config);
+
+	const database = firebase.database();
+	const ref = database.ref("coordinates/");
+
+	var long = -1, lat = -1;
+
+	function initMap() {
+		//13.032260, 80.178681
+
+
+
+		var uluru = {
+			lat: 13.032260,
+			lng: 80.178681
+		};
+
+		var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 7,
+			center: uluru
+		});
+
+		var marker = new google.maps.Marker({
+			position: uluru,
+			map: map
+		});
+
+		ref.on("value", snap => {
+			long = snap.val()[0];
+			lat = snap.val()[1];
+			document.getElementById('lat').innerHTML = lat;
+			document.getElementById('lon').innerHTML = long;
+			var LatLng = new google.maps.LatLng(long, lat);
+			marker.setPosition(LatLng);
+			map.setCenter(LatLng)
+			console.log("fetched!" + long + " " + lat);
+		});
+
+	}
+
+</script>
